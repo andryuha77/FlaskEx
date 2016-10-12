@@ -19,6 +19,21 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+	
+	<form id="name" action="/name" method="POST">
+    <input type="hidden" name="redirect" value="http://www.opera.com" />
+    <ul>
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="Enter your name" />
+        </li>
+        <li>
+            <input type="submit" value="submit" />
+            <input type="reset" value="reset" />
+        </li>
+    </ul>
+	</form>
+	
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

@@ -1,13 +1,13 @@
-from flask import Flask
-app = Flask(__name__)
+import flask as fl
+app = fl.Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return app.send_static_file('index.html')
 	
-@app.route('/name')
+@app.route("/name", methods=["GET", "POST"])
 def name():
-    return 'Your name is:'	
+    return "Hello " + fl.request.form["name"] + "!"	
 	
 
 if __name__ == "__main__":
